@@ -1,12 +1,12 @@
 import React from "react";
 import {
+  Cart,
   FlexContent,
+  Footer,
   Hero,
+  Navbar,
   Sales,
   Stories,
-  Footer,
-  Navbar,
-  Cart,
 } from "./components";
 import {
   heroapi,
@@ -16,7 +16,7 @@ import {
   sneaker,
   story,
   footerAPI,
-} from "./data/data";
+} from "./data/data.js";
 
 const App = () => {
   return (

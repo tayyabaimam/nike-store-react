@@ -3,8 +3,9 @@ import Clips from "./utils/Clips";
 import SocialLink from "./utils/SocialLink";
 
 const Hero = ({
-  heroapi: { title, subtitle, img, btntext, sociallinks, videos },
+  heroapi: { title, subtitle, btntext, img, sociallinks, videos },
 }) => {
+  // console.log(heroapi)
   return (
     <>
       <div className="relative h-auto w-auto flex flex-col">
@@ -19,8 +20,7 @@ const Hero = ({
             </h1>
             <button
               type="button"
-              className="button-theme bg-slate-200 shadow-slate-200
-            rounded-xl my-5"
+              className="button-theme bg-slate-200  shadow-slate-200 rounded-xl my-5"
             >
               {btntext}
             </button>

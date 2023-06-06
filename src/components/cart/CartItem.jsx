@@ -1,5 +1,5 @@
-import { MinusIcon, PlusIcon, TrashIcon } from "@heroicons/react/24/solid";
 import React from "react";
+import { MinusIcon, PlusIcon, TrashIcon } from "@heroicons/react/24/outline";
 import { useDispatch } from "react-redux";
 import {
   setDecreaseItemQTY,
@@ -14,7 +14,7 @@ const CartItem = ({
 
   const onRemoveItem = () => {
     dispatch(
-      setRemoveItemFromCart(
+      setRemoveItemFromCart({
         id,
         title,
         text,
@@ -22,13 +22,14 @@ const CartItem = ({
         color,
         shadow,
         price,
-        cartQuantity
-      )
+        cartQuantity,
+      })
     );
   };
+
   const onIncreaseItemQTY = () => {
     dispatch(
-      setIncreaseItemQTY(
+      setIncreaseItemQTY({
         id,
         title,
         text,
@@ -36,13 +37,13 @@ const CartItem = ({
         color,
         shadow,
         price,
-        cartQuantity
-      )
+        cartQuantity,
+      })
     );
   };
   const onDecreaseItemQTY = () => {
     dispatch(
-      setDecreaseItemQTY(
+      setDecreaseItemQTY({
         id,
         title,
         text,
@@ -50,10 +51,11 @@ const CartItem = ({
         color,
         shadow,
         price,
-        cartQuantity
-      )
+        cartQuantity,
+      })
     );
   };
+
   return (
     <>
       <div className="flex items-center justify-between w-full px-5">
@@ -64,7 +66,7 @@ const CartItem = ({
             <img
               src={img}
               alt={`img/cart-item/${id}`}
-              className="w-26 h-auto object-fill lg:w-28"
+              className="w-36 h-auto object-fill lg:w-28"
             />
             <div className="absolute right-1 top-1 blur-theme-effect bg-white/80 text-black text-xs px-1 rounded">
               ${price}
@@ -75,7 +77,7 @@ const CartItem = ({
               <h1 className="font-medium text-lg text-slate-900 lg:text-sm">
                 {title}
               </h1>
-              <p className="text-sm text-slate-800 lg:text-sm">{text}</p>
+              <p className="text-sm text-slate-800 lg:text-xs">{text}</p>
             </div>
             <div className="flex items-center justify-around w-full">
               <button
@@ -85,7 +87,7 @@ const CartItem = ({
               >
                 <MinusIcon className="w-5 h-5 lg:w-4 lg:h-4 text-white stroke-[2]" />
               </button>
-              <div className="bg-theme-cart rounded text-white font-medium lg:text-sm w-7 h-6 lg:h-5 lg:w-6 flex items-center justify-center">
+              <div className="bg-theme-cart rounded text-white font-medium lg:text-xs w-7 h-6 lg:h-5 lg:w-6 flex items-center justify-center">
                 {cartQuantity}
               </div>
               <button
@@ -104,10 +106,10 @@ const CartItem = ({
               ${price * cartQuantity}
             </h1>
           </div>
-          <div>
+          <div className="grid items-center justify-center">
             <button
-              type=""
-              className="bg-theme-cart rounded p-1 lg:p-0.5 grid items-center justify-items- center cursor-pointer"
+              type="button"
+              className="bg-theme-cart rounded p-1 lg:p-0.5 grid items-center justify-items-center cursor-pointer"
               onClick={onRemoveItem}
             >
               <TrashIcon className="w-5 h-5 text-white" />

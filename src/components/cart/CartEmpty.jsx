@@ -1,6 +1,6 @@
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import emptybag from "../../assets/emptybag.png";
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 const CartEmpty = ({ onCartToggle }) => {
   return (
@@ -13,11 +13,11 @@ const CartEmpty = ({ onCartToggle }) => {
         />
         <button
           type="button"
+          className="button-theme bg-gradient-to-b from-amber-500 to-orange-500 shadow-lg shadow-orange-500 flex items-center justify-center text-slate-900 py-2 gap-3 text-sm px-5 font-semibold active:scale-110"
           onClick={onCartToggle}
-          className="button-theme bg-gradient-to-b from-amber-500 to-orange-500 shadow-llg shadow-orange-500 flex items-center justify-center text-slate-900 py-2 gap-3 text-sm px-5 font-semibold active:scale-110"
         >
           <ArrowLeftIcon className="w-5 h-5 text-slate-900" />
-          <span className="">Back to Nike Store</span>
+          <span className="">Back To Nike Store</span>
         </button>
       </div>
     </>
