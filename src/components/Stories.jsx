@@ -1,6 +1,6 @@
 import React from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css";
+import { Splide, SplideSlide } from "/node_modules/@splidejs/react-splide";
+import "@splidejs/splide/css";
 import { HashtagIcon, HeartIcon } from "@heroicons/react/24/solid";
 import { ClockIcon } from "@heroicons/react/24/outline";
 import Title from "./utils/Title";
